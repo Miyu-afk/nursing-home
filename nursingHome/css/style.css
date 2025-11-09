@@ -1,0 +1,171 @@
+:root{
+  --main-color: #ffc4b2;
+  --sub-color: #1cb44f;
+}
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+}
+.header-sticky{
+  position: sticky;
+}
+
+.header{
+  position: relative;
+}
+
+.header-logo{
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--main-color);
+}
+
+.menu-toggle{
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  font-size: 24px;
+}
+
+.nav-menu{
+  display: none;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 80px;
+
+}
+
+.nav-menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav-menu li{
+  margin: 10px 0;
+}
+
+.nav-menu.active{
+  display: block;
+}
+
+.top-kv{
+  background-image: url(../img/roujin.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.top-kv-content{
+  padding-top: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+  -1px -1px 0 #333,
+   1px -1px 0 #333,
+  -1px  1px 0 #333,
+  1px 1px 0 #333;
+}
+@media (max-width: 768px) {
+  .top-kv-content {
+    font-size: 18px;
+  }
+}
+
+.search-section h2{
+  font-size: 24px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.card-container{
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  margin: 20px auto;
+  perspective: 1000px;
+}
+
+.card{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#start-matching{
+text-align: center;}
+
+.area-select-section{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+  -1px -1px 0 #333,
+   1px -1px 0 #333,
+  -1px  1px 0 #333,
+  1px 1px 0 #333;
+
+}
+
+.select-label{
+  color: #fff;
+}
+
+#area-select{
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+  -1px -1px 0 #333,
+   1px -1px 0 #333,
+  -1px  1px 0 #333,
+  1px 1px 0 #333;
+}
+
+#area-select option{
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  #area-select{
+    font-size: 18px;
+    border: 1px solid ;
+  }
+}
+
+#start-matching{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.add-home-request{
+  display: flex;
+  justify-content: center;
+}
+
+.search-section{
+margin-top: 150px;
+}

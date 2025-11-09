@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nursing home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  <link rel="stylesheet" href="css/style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="header-sticky">
+    <section class="header">
+      <button class="menu-toggle" id="menu-toggle">
+        ☰
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#match">マッチング機能</a></li>
+          <li><a href="#type">機能別検索</a></li>
+          <li><a href="#free">キーワード検索</a></li>
+        </ul>
+      </nav>
+      <h1 class="header-logo"><a href="">Nursing <span class="logo-art">H</span>ome</a></h1>
+  </header>
+
+  <main>
+  <div class="container-fluid">
+    <div class="top-kv">
+      <p class="top-kv-content top-content">老人ホームの検索サイト</p>
+      <div class="area-select-section"> 
+    <label for="area-select" class="select-label">地域を選んでください：</label>
+    <select id="area-select">
+      <option value="すべて">すべて</option>
+      <option value="北海道">北海道</option>
+      <option value="青森県">青森県</option>
+      <option value="岩手県">岩手県</option>
+      <option value="宮城県">宮城県</option>
+      <option value="秋田県">秋田県</option>
+      <option value="山形県">山形県</option>
+      <option value="福島県">福島県</option>
+      <option value="茨城県">茨城県</option>
+      <option value="栃木県">栃木県</option>
+      <option value="群馬県">群馬県</option>
+      <option value="埼玉県">埼玉県</option>
+      <option value="千葉県">千葉県</option>
+      <option value="東京都">東京都</option>
+      <option value="神奈川県">神奈川県</option>
+      <option value="山梨県">山梨県</option>
+      <option value="長野県">長野県</option>
+      <option value="新潟県">新潟県</option>
+      <option value="富山県">富山県</option>
+      <option value="石川県">石川県</option>
+      <option value="福井県">福井県</option>
+      <option value="岐阜県">岐阜県</option>
+      <option value="静岡県">静岡県</option>
+      <option value="愛知県">愛知県</option>
+      <option value="三重県">三重県</option>
+      <option value="滋賀県">滋賀県</option>
+      <option value="京都府">京都府</option>
+      <option value="石川県">石川県</option>
+      <option value="大阪府">大阪府</option>
+      <option value="兵庫県">兵庫県</option>
+      <option value="奈良県">奈良県</option>
+      <option value="和歌山県">和歌山県</option>
+      <option value="鳥取県">鳥取県</option>
+      <option value="岡山県">岡山県</option>
+      <option value="広島県">広島県</option>
+      <option value="山口県">山口県</option>
+      <option value="徳島県">徳島県</option>
+      <option value="香川県">香川県</option>
+      <option value="愛媛県">愛媛県</option>
+      <option value="高知県">高知県</option>
+      <option value="福岡県">福岡県</option>
+      <option value="佐賀県">佐賀県</option>
+      <option value="長崎県">長崎県</option>
+      <option value="熊本県">熊本県</option>
+      <option value="大分県">大分県</option>
+      <option value="宮崎県">宮崎県</option>
+      <option value="鹿児島県">鹿児島県</option>
+      <option value="沖縄県">沖縄県</option>
+    </select>
+  </div>
+</div>
+
+    <section class="search-section" id="match">
+    <h2 id="match">マッチング機能</h2>
+    <button id="start-matching" class="btn btn-outline-secondary">マッチング開始</button>
+   
+    <div class="container">
+
+      <div id="card-container" class="card-container"></div>
+    </div>
+    </section>
+
+    <section id="liked-section" style="display:none;">
+      <h2>いいねした施設一覧</h2>
+      <div id="liked-list"></div>
+      <button id="back-to-match">マッチング画面に戻る</button>
+    </section>
+
+    <div class="btn-wrapper">
+    <button id="show-liked" class="btn btn-outline-secondary">いいね一覧を見る</button>
+    </div>
+
+    <section class="search-section" id="type">
+    <h2>機能別検索</h2>
+    <div class="ms-5">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">24時間看護あり</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">看護師常勤</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">痰取り</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">認知症ケア</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">褥瘡</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">その他特別なケアが必要</label>
+      </div>
+      <div class=" d-flex justify-content-end me-5">
+        <button type="button" class="btn btn-secondary">検索</button>
+      </div>
+    </div>
+    </section>
+
+    <section class="search-section" id="free">
+    <h2>キーワード検索</h2>
+    <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">キーワード検索</label>
+    <input type="text" class="form-control" id="keyword" aria-describedby="emailHelp">
+    <div id="keywordHelp" class="form-text">ご希望の施設のキーワードを入力してください</div>
+  </div>
+    <div class=" d-flex justify-content-end me-5">
+      <button type="submit" class="btn btn-secondary">検索</button>
+    </div>
+</form>
+    </section>
+
+    <section class="add-home-request">
+      <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal"><p class="fs-5">施設を追加したい方へ</p></button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">施設を追加</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="request-attention">貴施設について下記のフォームにご記載の上、施設を追加をお願いします。</p>
+                <div>
+                  <input type="text" id="home-name" placeholder="施設名">
+                  <input type="text" id="home-area" placeholder="地域">
+                  <input type="text" id="home-description" placeholder="説明">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+                <button id="add-home" type="button" class="btn btn-primary">施設を追加</button>
+              </div>      
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+  </main>
+</body>
+</html>
